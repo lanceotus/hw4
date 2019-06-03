@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mainstyle.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/products.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог товаров</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="logo">Магазин ножей</div>
+        <div class="menu_item"><a href="{{ url_for('index') }}" class="menu_text">На главную</a></div>
+    </div>
+    <div class="main_body">
+        {% for item in product_list %}
+            <a href="{{ url_for('products') }}{{ item['id'] }}">
+                <div class="product_card">
+                    <p class="card_product_name">{{ item['name'] }}</p>
+                    <img src="{{ url_for('static', filename='img/' + item['picture']) }}" width="100%">
+                    <div class="card_price_box">
+                        Цена: <span class="card_price_text">{{ item['price'] }}</span> руб.
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</body>
+</html>

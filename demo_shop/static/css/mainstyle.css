@@ -1,0 +1,78 @@
+body {
+    background-color: #eeeecc;
+    color: #333;
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+}
+.menu {
+    background-color: #666622;
+    height: 80px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    min-width: 800px;
+}
+.menu_item {
+    height: 100%;
+    float: left;
+    border-right: 1px solid #FFFFFF;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0px;
+
+}
+.menu_text {
+    color: #FFFFFF;
+    font-size: 16pt;
+    font-family: Verdana, Georgia, Times, serif;
+    font-weight: normal;
+    text-decoration-line: none;
+}
+.logo {
+    height: 100%;
+    float: left;
+    color: #FFFFFF;
+    font-size: 20pt;
+    font-family: Verdana, Georgia, Times, serif;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-right: 1px solid #FFFFFF;
+}
+.main_body {
+    height: 80vh;
+    padding: 30px;
+    margin: 0px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #FFFFFF;
+    min-width: 800px;
+}
+.error {
+    vertical-align: center;
+    text-align: center;
+    color: #000000;
+    font-size: 20pt;
+    font-family: Georgia, Times, serif;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+}
+h1 {
+    text-align: center;
+    color: #000000;
+    font-size: 24pt;
+    font-family: Georgia, Times, serif;
+    font-weight: normal;
+}
+p {
+    color: #000000;
+    text-align: justify;
+    margin-left: 60px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mainstyle.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/product.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="logo">Магазин ножей</div>
+        <div class="menu_item"><a href="{{ url_for('index') }}" class="menu_text">На главную</a></div>
+        <div class="menu_item"><a href="{{ url_for('products') }}" class="menu_text">Товары</a></div>
+    </div>
+    <div class="main_body">
+        <p class="product_name">{{ name }}</p>
+        <div class="image_column">
+            <img src="{{ url_for('static', filename='img/' + picture) }}" width="100%">
+            <div class="price_box">
+                Цена: <span class="price_text">{{ price }}</span> руб.
+            </div>
+        </div>
+        <div class="description_column">
+            <b>Материал клинка: </b>{{ blade_material }}<br>
+            <b>Твердость по шкале Роквелла (Hrc): </b>{{ hardness }}<br>
+            <b>Материал рукояти: </b>{{ handle_material }}<br>
+            <b>Тип ножевого замка: </b>{{ lock }}<br>
+            <b>Приспособление для открытия клинка: </b>{{ action }}<br>
+            <b>Длина клинка (см): </b>{{ blade_length }}<br>
+            <b>Длина ножа (см): </b>{{ full_length }}<br>
+            <b>Толщина обуха (мм): </b>{{ blade_thickness }}<br>
+            <b>Вес (гр): </b>{{ weight }}<br>
+            <b>Компания-производитель: </b>{{ producer }}<br>
+            <b>Страна-изготовитель: </b>{{ origin }}<br>
+        </div>
+    </div>
+</body>
+</html>

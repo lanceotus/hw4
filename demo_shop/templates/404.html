@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mainstyle.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="logo">Магазин ножей</div>
+        <div class="menu_item"><a href="{{ url_for('index') }}" class="menu_text">На главную</a></div>
+        <div class="menu_item"><a href="{{ url_for('products') }}" class="menu_text">Товары</a></div>
+    </div>
+    <div class="main_body">
+        <p class="error">Ошибка 404. Запрошенная Вами страница не существует.</p>
+    </div>
+</body>
+</html>
