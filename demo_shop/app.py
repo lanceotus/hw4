@@ -10,20 +10,20 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'], endpoint='index')
 def index():
-    return render_template('index.html', fld='ЫЫыы')
+    return render_template('index.html')
 
 
 @app.route('/products/', methods=['GET'])
 def products():
     res = Product.query.all()
     catalog = []
-    for pr in res:
-        itm = dict()
-        itm['id'] = pr.id
-        itm['name'] = pr.name
-        itm['picture'] = pr.picture
-        itm['price'] = pr.price
-        catalog.append(itm)
+    for result_item in res:
+        catalog_item = dict()
+        catalog_item['id'] = result_item.id
+        catalog_item['name'] = result_item.name
+        catalog_item['picture'] = result_item.picture
+        catalog_item['price'] = result_item.price
+        catalog.append(catalog_item)
     return render_template('products.html', product_list=catalog)
 
 
@@ -32,12 +32,8 @@ def product(product_id):
     res = Product.query.filter(Product.id == product_id).all()
     if len(res) == 0:
         return abort(404)
-    pr = res[0]
-    return render_template('product.html', name=pr.name, picture=pr.picture, blade_material=pr.blade_material,
-                           hardness=pr.hardness, handle_material=pr.handle_material, lock=pr.lock,
-                           action=pr.action, blade_length=pr.blade_length, full_length=pr.full_length,
-                           blade_thickness=pr.blade_thickness, weight=pr.weight, producer=pr.producer,
-                           origin=pr.origin, price=pr.price)
+    result_item = res[0]
+    return render_template('product.html', product=result_item)
 
 
 @app.errorhandler(404)
